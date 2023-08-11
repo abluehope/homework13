@@ -1,0 +1,100 @@
+.main_banner {
+  * {
+    outline: 1px solid --tomato;
+  }
+  position: relative;
+  z-index: 999;
+  display: flex;
+  width: 1170rem;
+  padding: 0;
+
+  margin: -150rem auto 0 auto;
+
+  > div {
+    padding: 56rem 40rem;
+    width: 390rem;
+    height: 300rem;
+
+    strong {
+      display: block;
+      margin: 0 0 16rem 0;
+      text-align: center;
+      font-size: 32rem;
+      font-weight: 600;
+      color: $color-white;
+    }
+    p {
+      text-align: center;
+      color: $color-white;
+    }
+  }
+
+  .mb_btn {
+    display: block;
+    width: 100%;
+    padding: 12rem 0;
+    background: $color-white;
+    text-align: center;
+  }
+
+  .d_search {
+    background: $color-main;
+    .search {
+      display: flex;
+      align-items: center;
+      min-height: 120rem;
+      input {
+        font-size: 14rem;
+        width: 240rem;
+        padding: 11rem;
+        border: none;
+        outline: none;
+        letter-spacing: -0.025em;
+        font-family: "Pretendard Variable";
+        float: left;
+      }
+      button {
+        box-shadow: none;
+        border: none;
+        padding: 0 21rem;
+        height: 38rem;
+        font-size: 16rem;
+        font-family: "Pretendard Variable";
+        background: $color-sub;
+        color: $color-white;
+        float: right;
+        cursor: pointer;
+      }
+    }
+  }
+  .reservation {
+    background: $color-sub;
+    .btn_wrap {
+      display: flex;
+      gap: 5rem;
+      align-items: center;
+      width: 100%;
+      min-height: 120rem;
+    }
+  }
+  .chart {
+    display: flex;
+    flex-direction: column;
+
+    background: #2ca48f;
+
+    .btn_wrap {
+      margin: auto 0;
+      .btn {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+
+        a {
+          flex: 1 1 40%;
+          height: 40rem;
+        }
+      }
+    }
+  }
+}

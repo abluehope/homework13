@@ -1,0 +1,26 @@
+.main_h_lecture {
+  background: $color-bg;
+
+  .container_wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $size-gap;
+
+    .con_box {
+      .img_box {
+        margin: 0 0 24rem 0;
+      }
+      .txt_box {
+        strong {
+          width: 298rem;
+        }
+        span {
+          display: block;
+          margin: 0 0 8rem 0;
+          font-size: 14rem;
+          color: $color-main;
+        }
+      }
+    }
+  }
+}
