@@ -52,6 +52,10 @@
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @include res() {
+      top: 70%;
+    }
   }
   .slogan {
     position: absolute;
@@ -59,6 +63,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
+    @include res() {
+      top: 50%;
+      width: 100%;
+    }
 
     h2 {
       margin: 0 0 16rem 0;

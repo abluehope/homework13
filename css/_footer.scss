@@ -39,6 +39,9 @@
         }
       }
     }
+    @include res() {
+      display: none;
+    }
   }
 
   .copy_wrap {

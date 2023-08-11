@@ -1,0 +1,24 @@
+.to_top {
+  position: fixed;
+  bottom: 100rem;
+  right: 100rem;
+  z-index: 1000;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+
+  &.on {
+    bottom: 3%;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .material-symbols-outlined {
+    padding: 10rem;
+    font-size: 24rem;
+    background: $color-main;
+    color: $color-white;
+    cursor: pointer;
+  }
+}

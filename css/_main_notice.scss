@@ -66,6 +66,13 @@
       cursor: pointer;
       color: $color-gray;
     }
+
+    @include res() {
+      top: 78%;
+      .material-symbols-outlined {
+        font-size: 56rem;
+      }
+    }
   }
 
   .dots {

@@ -1,18 +1,20 @@
 .main_banner {
-  * {
-    outline: 1px solid --tomato;
-  }
   position: relative;
   z-index: 999;
   display: flex;
-  width: 1170rem;
+  max-width: 1170rem;
   padding: 0;
 
   margin: -150rem auto 0 auto;
 
+  @include res() {
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+  }
+
   > div {
     padding: 56rem 40rem;
-    width: 390rem;
+    flex: 1;
     height: 300rem;
 
     strong {
@@ -43,9 +45,12 @@
       display: flex;
       align-items: center;
       min-height: 120rem;
+      form {
+        flex: 1;
+      }
       input {
-        font-size: 14rem;
         width: 240rem;
+        font-size: 14rem;
         padding: 11rem;
         border: none;
         outline: none;

@@ -10,6 +10,9 @@
       grid-row-start: 1;
       grid-row-end: 2;
     }
+    @include res() {
+      grid-template-columns: 1fr;
+    }
 
     .dots {
       position: absolute;
