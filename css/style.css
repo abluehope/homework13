@@ -880,6 +880,11 @@ address {
   visibility: visible;
   opacity: 1;
 }
+@media (max-width: 768px) {
+  .to_top.on {
+    bottom: 0;
+  }
+}
 .to_top .material-symbols-outlined {
   padding: 10rem;
   font-size: 24rem;

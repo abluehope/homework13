@@ -8,6 +8,15 @@ $(function () {
     }
   });
 
+  $(window).on("scroll", function () {
+    let sct = $(window).scrollTop();
+    if (sct > 0) {
+      $(".to_top").addClass("on");
+    } else {
+      $(".to_top").removeClass("on");
+    }
+  });
+
   // 퀵 메뉴 고정
   var $target = $(".quick_menu");
   var $footer = $(".footer");
@@ -17,16 +26,6 @@ $(function () {
     var fot = $footer.offset().top;
     if (anchor > fot) $target.removeClass("qm_fixed");
     else $target.addClass("qm_fixed");
-  });
-
-  $(window).on("scroll", function () {
-    let sct = $(window).scrollTop();
-    if (sct > 0) {
-      $(".to_top").addClass("on");
-      hover();
-    } else {
-      $(".to_top").removeClass("on");
-    }
   });
 
   $(".to_top").on("click", function () {
