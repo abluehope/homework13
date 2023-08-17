@@ -233,6 +233,9 @@ address {
     display: none;
   }
 }
+.header .header_nav:hover .sub_menu {
+  height: 434px;
+}
 .header .header_nav .gnb_wrap {
   display: flex;
   justify-content: space-between;
@@ -300,25 +303,94 @@ address {
   outline: 1px solid #199da3;
 }
 .header .header_nav .sub_menu {
+  position: absolute;
+  background: #ffffff;
+  top: 132px;
+  height: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  transform: translate(0, 0);
+  z-index: 1000;
+  transition: height 0.5s;
+}
+.header .header_nav .sub_menu .inner {
   display: flex;
+  justify-content: right;
 }
-.header .header_nav .sub_menu * {
-  outline: 1px solid tomato;
+.header .header_nav .sub_menu .inner .sub {
+  padding: 16rem 0 0 0;
 }
-.header .header_nav .sub_menu .sub {
-  border-right: 1px solid #dddddd;
-}
-.header .header_nav .sub_menu .sub .itm {
+.header .header_nav .sub_menu .inner .sub .itm {
   width: 170rem;
   margin-right: 3rem;
 }
-.header .header_nav .sub_menu .sub .itm li a {
+.header .header_nav .sub_menu .inner .sub .itm li a {
   display: block;
   padding-left: 8rem;
   line-height: 32rem;
 }
-.header .header_nav .sub_menu .sub .itm li:hover {
+.header .header_nav .sub_menu .inner .sub .itm li:hover {
   background: #0770bb;
+  color: #ffffff;
+}
+.header .header_nav .sub_menu .inner .sub_reservation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16rem 0 0 0;
+  width: 271rem;
+  background: #0770bb;
+  text-align: center;
+}
+.header .header_nav .sub_menu .inner .sub_reservation .top .material-symbols-outlined {
+  margin: 0 0 16rem 0;
+  font-size: 80rem;
+  font-weight: 200;
+  color: #0770bb;
+  background: #ffffff;
+  padding: 0 5rem 8rem 5rem;
+  border-radius: 50%;
+}
+.header .header_nav .sub_menu .inner .sub_reservation .top .input_f {
+  display: inline-block;
+  text-align: center;
+}
+.header .header_nav .sub_menu .inner .sub_reservation .top .input_f form {
+  margin: 0 0 16rem 0;
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+.header .header_nav .sub_menu .inner .sub_reservation .top .input_f form input {
+  width: 60rem;
+  font-size: 12rem;
+  padding: 8rem;
+  border: none;
+  outline: none;
+  letter-spacing: -0.025em;
+  font-family: "Pretendard Variable";
+  text-align: center;
+}
+.header .header_nav .sub_menu .inner .sub_reservation .top .input_f form span {
+  color: #ffffff;
+}
+.header .header_nav .sub_menu .inner .sub_reservation .top p {
+  margin: 0 0 16rem 0;
+  font-size: 13rem;
+  line-height: 20rem;
+  color: #ffffff;
+}
+.header .header_nav .sub_menu .inner .sub_reservation .top p .point {
+  font-size: 18rem;
+  font-weight: 500;
+  color: #ffd000;
+}
+.header .header_nav .sub_menu .inner .sub_reservation .bottom a {
+  padding: 18rem 0;
+  width: 100%;
+  display: inline-block;
+  background: #199da3;
   color: #ffffff;
 }
 .header .nav_fixed {
@@ -464,7 +536,7 @@ address {
   align-items: center;
   min-height: 120rem;
 }
-.main_banner .d_search .search form {
+.main_banner .d_search .search form > * {
   flex: 1;
 }
 .main_banner .d_search .search input {

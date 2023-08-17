@@ -76,6 +76,11 @@
     @include res() {
       display: none;
     }
+    &:hover {
+      .sub_menu {
+        height: 434px;
+      }
+    }
     .gnb_wrap {
       display: flex;
       justify-content: space-between;
@@ -146,24 +151,106 @@
     }
 
     .sub_menu {
-      * {
-        outline: 1px solid tomato;
-      }
-      display: flex;
-      .sub {
-        border-right: 1px solid $color-border;
-        .itm {
-          width: 170rem;
-          margin-right: 3rem;
+      position: absolute;
+      background: $color-white;
+      top: 132px;
+      height: 0;
+      left: 0;
+      width: 100%;
 
-          li {
-            a {
-              display: block;
-              padding-left: 8rem;
-              line-height: 32rem;
+      overflow: hidden;
+      transform: translate(0, 0);
+      z-index: 1000;
+      transition: height 0.5s;
+
+      .inner {
+        display: flex;
+        justify-content: right;
+        .sub {
+          padding: 16rem 0 0 0;
+          .itm {
+            width: 170rem;
+            margin-right: 3rem;
+
+            li {
+              a {
+                display: block;
+                padding-left: 8rem;
+                line-height: 32rem;
+              }
+              &:hover {
+                background: $color-main;
+                color: $color-white;
+              }
             }
-            &:hover {
-              background: $color-main;
+          }
+        }
+
+        .sub_reservation {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 16rem 0 0 0;
+
+          width: 271rem;
+          background: $color-main;
+          text-align: center;
+
+          .top {
+            .material-symbols-outlined {
+              margin: 0 0 16rem 0;
+              font-size: 80rem;
+              font-weight: 200;
+              color: $color-main;
+              background: $color-white;
+              padding: 0 5rem 8rem 5rem;
+              border-radius: 50%;
+            }
+
+            .input_f {
+              display: inline-block;
+              text-align: center;
+              form {
+                margin: 0 0 16rem 0;
+                display: flex;
+                align-items: center;
+                gap: 8rem;
+
+                input {
+                  width: 60rem;
+                  font-size: 12rem;
+                  padding: 8rem;
+                  border: none;
+                  outline: none;
+                  letter-spacing: -0.025em;
+                  font-family: "Pretendard Variable";
+                  text-align: center;
+                }
+                span {
+                  color: $color-white;
+                }
+              }
+            }
+
+            p {
+              margin: 0 0 16rem 0;
+              font-size: 13rem;
+              line-height: 20rem;
+              color: $color-white;
+
+              .point {
+                font-size: 18rem;
+                font-weight: 500;
+                color: #ffd000;
+              }
+            }
+          }
+          .bottom {
+            a {
+              padding: 18rem 0;
+              width: 100%;
+              display: inline-block;
+              background: $color-sub;
               color: $color-white;
             }
           }
