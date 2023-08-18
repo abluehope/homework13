@@ -166,7 +166,13 @@ address {
 }
 @media (max-width: 768px) {
   .header .header_top .inner {
+    position: fixed;
+    left: 0;
+    right: 0;
     height: 80rem;
+    background: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    z-index: 1000;
   }
 }
 .header .header_top .inner .top_quick ul {
@@ -293,7 +299,6 @@ address {
   text-align: center;
   background: #0770bb;
   color: #ffffff;
-  outline: 1px solid #0770bb;
 }
 .header .header_nav .gnb_wrap .menu_btn_wrap .top_quick_btn span {
   vertical-align: -6rem;
@@ -301,7 +306,6 @@ address {
 }
 .header .header_nav .gnb_wrap .menu_btn_wrap .mc {
   background: #199da3;
-  outline: 1px solid #199da3;
 }
 .header .header_nav .sub_menu {
   position: absolute;
@@ -340,7 +344,7 @@ address {
   flex-direction: column;
   justify-content: space-between;
   padding: 16rem 0 0 0;
-  width: 271rem;
+  width: 270rem;
   background: #0770bb;
   text-align: center;
 }
@@ -477,6 +481,11 @@ address {
   text-align: center;
   color: #ffffff;
 }
+@media (max-width: 768px) {
+  .main_visual .slogan h2 {
+    font-size: 32rem;
+  }
+}
 .main_visual .slogan p {
   font-size: 18rem;
   font-weight: 300;
@@ -484,6 +493,11 @@ address {
   text-shadow: 0 0 3px #000;
   text-align: center;
   color: #ffffff;
+}
+@media (max-width: 768px) {
+  .main_visual .slogan p {
+    font-size: 16rem;
+  }
 }
 .main_visual .slogan .slogan_itm {
   display: none;
@@ -552,6 +566,11 @@ address {
   letter-spacing: -0.025em;
   font-family: "Pretendard Variable";
   float: left;
+}
+@media (max-width: 768px) {
+  .main_banner .d_search .search input {
+    width: 221rem;
+  }
 }
 .main_banner .d_search .search button {
   box-shadow: none;

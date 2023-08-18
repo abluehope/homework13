@@ -75,6 +75,10 @@
       text-shadow: 0 0 3px #000;
       text-align: center;
       color: $color-white;
+
+      @include res() {
+        font-size: 32rem;
+      }
     }
 
     p {
@@ -84,6 +88,10 @@
       text-shadow: 0 0 3px #000;
       text-align: center;
       color: $color-white;
+
+      @include res() {
+        font-size: 16rem;
+      }
     }
 
     .slogan_itm {

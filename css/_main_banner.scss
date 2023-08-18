@@ -59,6 +59,10 @@
         letter-spacing: -0.025em;
         font-family: "Pretendard Variable";
         float: left;
+
+        @include res() {
+          width: 221rem;
+        }
       }
       button {
         box-shadow: none;
