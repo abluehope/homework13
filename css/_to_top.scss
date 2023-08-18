@@ -8,12 +8,16 @@
   visibility: hidden;
   transition: 0.5s;
 
+  @include res() {
+    right: 0;
+  }
+
   &.on {
     bottom: 3%;
     visibility: visible;
     opacity: 1;
 
-    @media (max-width: 768px) {
+    @include res() {
       bottom: 0;
     }
   }

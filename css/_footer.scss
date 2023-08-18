@@ -80,6 +80,22 @@
             background: $color-gray;
           }
         }
+
+        @include res() {
+          flex-direction: column;
+          justify-content: inherit;
+          gap: 8rem;
+          text-align: center;
+
+          &:nth-child(1) {
+            &::after {
+              content: "";
+              margin: 8rem 0 16rem 0;
+              height: 1px;
+              background: $color-gray;
+            }
+          }
+        }
       }
     }
 
@@ -93,6 +109,14 @@
             font-size: 24rem;
             font-weight: 500;
             color: $color-sub;
+
+            @include res() {
+              font-size: 20rem;
+            }
+          }
+          @include res() {
+            font-size: 14rem;
+            line-height: 18rem;
           }
         }
       }

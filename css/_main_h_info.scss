@@ -1,17 +1,24 @@
 .main_h_info {
-  .inner {
+  .content_wrap {
+    margin: 0 auto $size-gap auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: $size-gap;
 
-    .content:nth-child(1) {
+    .banner_slide_wrap {
       grid-column-start: 1;
       grid-column-end: 3;
       grid-row-start: 1;
       grid-row-end: 2;
+
+      @include res() {
+        margin: 0 0 $size-gap 0;
+      }
     }
+
     @include res() {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(1, 2fr);
+      gap: 0;
     }
 
     .dots {
@@ -130,6 +137,19 @@
         background: url(../images/main_doctor_03.png) no-repeat 140% center,
           linear-gradient(-45deg, #736862 50%, #92857d 50%);
       }
+    }
+  }
+
+  .btn_wrap {
+    display: flex;
+    gap: $size-gap;
+
+    > a {
+      flex: 1;
+    }
+
+    @include res() {
+      flex-direction: column;
     }
 
     .info_btn {
