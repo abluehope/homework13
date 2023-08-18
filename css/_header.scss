@@ -79,6 +79,7 @@
     &:hover {
       .sub_menu {
         height: 434px;
+        border-bottom: 1px solid $color-border;
       }
     }
     .gnb_wrap {
@@ -266,5 +267,11 @@
     right: 0;
     background: $color-white;
     z-index: 1000;
+
+    .gnb_wrap {
+      .sub_menu {
+        top: 71px;
+      }
+    }
   }
 }

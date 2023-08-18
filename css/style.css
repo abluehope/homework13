@@ -235,6 +235,7 @@ address {
 }
 .header .header_nav:hover .sub_menu {
   height: 434px;
+  border-bottom: 1px solid #dddddd;
 }
 .header .header_nav .gnb_wrap {
   display: flex;
@@ -401,6 +402,9 @@ address {
   background: #ffffff;
   z-index: 1000;
 }
+.header .nav_fixed .gnb_wrap .sub_menu {
+  top: 71px;
+}
 
 .main_visual {
   position: relative;
@@ -540,7 +544,7 @@ address {
   flex: 1;
 }
 .main_banner .d_search .search input {
-  width: 240rem;
+  width: 236rem;
   font-size: 14rem;
   padding: 11rem;
   border: none;
@@ -553,7 +557,7 @@ address {
   box-shadow: none;
   border: none;
   padding: 0 21rem;
-  height: 38rem;
+  height: 40rem;
   font-size: 16rem;
   font-family: "Pretendard Variable";
   background: #199da3;
